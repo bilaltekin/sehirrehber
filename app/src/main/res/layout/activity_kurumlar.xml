@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="vertical"
+    tools:context=".activity.KurumlarActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:text="DİYARBAKIR VALİLİĞİ"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/valiPhoneIV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:onClick="makePhone"
+        app:srcCompat="@android:drawable/ic_menu_call" />
+
+    <TextView
+        android:id="@+id/valiPhoneTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:text="04122802000" />
+
+    <ImageView
+        android:id="@+id/valiLocationIV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:onClick="goLocation"
+        app:srcCompat="@drawable/ic_location_on_black_24dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:gravity="center_horizontal"
+        android:text="Yenişehir Mahallesi Lise Caddesi" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:text="DİYARBAKIR BÜYÜKŞEHİR BELEDİYESİ"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/belediyePhoneIV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:onClick="makePhone"
+        app:srcCompat="@android:drawable/ic_menu_call" />
+
+    <TextView
+        android:id="@+id/belediyePhoneTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:text="04122294880" />
+
+    <ImageView
+        android:id="@+id/belediyeLocationIV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:onClick="goLocation"
+        app:srcCompat="@drawable/ic_location_on_black_24dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Yenişehir Mahallesi, 21100  YeniŞehir" />
+</LinearLayout>
