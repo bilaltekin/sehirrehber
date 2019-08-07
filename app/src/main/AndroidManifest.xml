@@ -11,14 +11,6 @@
         android:roundIcon="@mipmap/diyarbakir_ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.KurumlarActivity">
-
-        </activity>
-        <activity android:name=".activity.YemekActivity" />
-        <activity
-            android:name=".activity.TarihiMekanActivity"
-            android:label="@string/title_activity_tarihi_mekan"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,31 +1,52 @@
-package com.example.sehirrehberi.activity;
+package com.example.sehirrehberi.fragment;
 
+
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.sehirrehberi.R;
 
-public class KurumlarActivity extends AppCompatActivity {
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class KurumlarFragment extends Fragment {
 
-    TextView valiPhoneTV, belediyePhoneTV;
+    private View mainView;
+    private TextView valiPhoneTV, belediyePhoneTV;
+    private Context context;
+
+    public KurumlarFragment() {
+        // Required empty public constructor
+    }
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kurumlar);
-
-        getSupportActionBar().hide();
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+         mainView = inflater.inflate(R.layout.fragment_kurumlar, container, false);
 
         init();
+
+        return  mainView;
+
+
     }
 
     private void init() {
 
-        valiPhoneTV= findViewById(R.id.valiPhoneTV);
-        belediyePhoneTV=findViewById(R.id.belediyePhoneTV);
+        valiPhoneTV= mainView.findViewById(R.id.valiPhoneTV);
+        belediyePhoneTV=mainView.findViewById(R.id.belediyePhoneTV);
+        this.context=getContext();
     }
 
     public void makePhone(View view) {
@@ -39,7 +60,7 @@ public class KurumlarActivity extends AppCompatActivity {
             Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
             Intent chooser = Intent.createChooser(callIntent,"rgdsfg");
 
-            if(callIntent.resolveActivity(getPackageManager()) != null)
+            if(callIntent.resolveActivity(context.getPackageManager()) != null)
             {
 
                 startActivity(chooser);
@@ -79,4 +100,5 @@ public class KurumlarActivity extends AppCompatActivity {
             startActivity(mapIntent);
         }
     }
+
 }

@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.sehirrehberi.R;
@@ -44,15 +45,19 @@ public class MekanAdapter extends RecyclerView.Adapter<MekanHolder> {
         mekanHolder.mekanLIV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Build the intent
-                Uri location = Uri.parse(arrayList.get(i).getLocation());
-                Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
+                if (arrayList.get(i).getLocation()==null) {
+                    Toast.makeText(context, "Hatalı konum", Toast.LENGTH_SHORT).show();
+                } else {
 
-                Intent chooser = Intent.createChooser(mapIntent,"");
+                    // Build the intent
+                    Uri location = Uri.parse(arrayList.get(i).getLocation());
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
+
+                    Intent chooser = Intent.createChooser(mapIntent,"Bir tane uygulama seçin");
 
 
-                context.startActivity(chooser);
-                // Verify it resolves
+                    context.startActivity(chooser);
+                    // Verify it resolves
                /* PackageManager packageManager =context.getPackageManager();
                 List<ResolveInfo> activities = packageManager.queryIntentActivities(mapIntent, 0);
                 boolean isIntentSafe = activities.size() > 0;
@@ -61,6 +66,9 @@ public class MekanAdapter extends RecyclerView.Adapter<MekanHolder> {
                 if (isIntentSafe) {
                     context.startActivity(mapIntent);
                 }*/
+                }
+                    
+                
             }
         });
 
