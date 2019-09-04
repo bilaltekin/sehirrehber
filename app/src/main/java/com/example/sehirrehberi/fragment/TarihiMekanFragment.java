@@ -55,7 +55,7 @@ public class TarihiMekanFragment extends Fragment {
 
     private void listeyidoldur() {
 
-        mekanList.add(new MekanModel("Hasan Paşa Hanı","https://gezievreni.com/wp-content/uploads/2017/04/Hasan-Pasa-Hani-Diyarbakir.jpg"));
+        mekanList.add(new MekanModel("Hasan Paşa Hanı","https://gezievreni.com/wp-content/uploads/2017/04/Hasan-Pasa-Hani-Diyarbakir.jpg","geo:37.912914,40.2369558?q=37.912914,40.2369558,20(Hasan Paşa Hanı)"));
 
         mekanList.add(new MekanModel("Ulu cami","http://semerkandvakfi.org/wp-content/uploads/2018/12/diyarbakir-ulu-camii-banner-1024x556.jpg","geo:37.9123646,40.2357003?q=37.9123646,40.2357003,20(Diyarbakır+Ulu+Cami)"));
         mekanList.add(new MekanModel("Sülüklü Han","https://seymenbozaslan.com/wp-content/uploads/2018/12/IMG_9759-1024x683.jpg","geo:37.9115354,40.2373282?q=37.9115354,40.2373282,20(Sülüklü+Han)"));

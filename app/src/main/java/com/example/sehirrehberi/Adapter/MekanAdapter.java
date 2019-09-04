@@ -2,6 +2,8 @@ package com.example.sehirrehberi.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,6 +20,7 @@ import com.example.sehirrehberi.model.MekanModel;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MekanAdapter extends RecyclerView.Adapter<MekanHolder> {
 
@@ -53,19 +56,19 @@ public class MekanAdapter extends RecyclerView.Adapter<MekanHolder> {
                     Uri location = Uri.parse(arrayList.get(i).getLocation());
                     Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
 
-                    Intent chooser = Intent.createChooser(mapIntent,"Bir tane uygulama seçin");
+                    /*Intent chooser = Intent.createChooser(mapIntent,"Bir tane uygulama seçin");
 
 
-                    context.startActivity(chooser);
+                    context.startActivity(chooser);*/
                     // Verify it resolves
-               /* PackageManager packageManager =context.getPackageManager();
+                PackageManager packageManager =context.getPackageManager();
                 List<ResolveInfo> activities = packageManager.queryIntentActivities(mapIntent, 0);
                 boolean isIntentSafe = activities.size() > 0;
 
                 // Start an activity if it's safe
                 if (isIntentSafe) {
                     context.startActivity(mapIntent);
-                }*/
+                }
                 }
                     
                 
