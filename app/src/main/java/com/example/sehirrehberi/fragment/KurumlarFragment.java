@@ -9,6 +9,8 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,19 +18,26 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.sehirrehberi.Adapter.KurumAdapter;
+import com.example.sehirrehberi.Adapter.MekanAdapter;
 import com.example.sehirrehberi.R;
+import com.example.sehirrehberi.model.KurumModel;
+import com.example.sehirrehberi.model.MekanModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class KurumlarFragment extends Fragment implements View.OnClickListener{
+public class KurumlarFragment extends Fragment {
 
+    private RecyclerView recyclerView;
+    private KurumAdapter kurumAdapter;
+    private ArrayList<KurumModel> kurumList;
+    private RecyclerView.LayoutManager kurumLayoutManager;
     private View mainView;
-    private TextView valiPhoneTV, belediyePhoneTV;
-    private ImageView belediyeLocationIV, valiLocationIM, belediyePhoneIV, valiPhoneIV;
-    private Context context;
+
 
 
     public KurumlarFragment() {
@@ -44,140 +53,38 @@ public class KurumlarFragment extends Fragment implements View.OnClickListener{
 
         init();
 
+        setuprecyleView();
+        listeyidoldur();
+        kurumAdapter.notifyDataSetChanged();
+
         return  mainView;
 
 
     }
 
-    private void init() {
+    private void listeyidoldur() {
 
-        valiPhoneTV= mainView.findViewById(R.id.valiPhoneTV);
-        belediyePhoneTV=mainView.findViewById(R.id.belediyePhoneTV);
+        kurumList.add(new KurumModel("Diyarbakır Valiliği","(0412) 280 20 00","Yenişehir, Lise Cad., 21100 Yenişehir/Diyarbakır"));
+        kurumList.add(new KurumModel("Diyarbakır Büyükşehir Belediyesi"," (0412) 229 48 80","Yenişehir, Elazığ Cd., 21100 Yenişehir/Diyarbakır"));
+    }
 
-        belediyeLocationIV = mainView.findViewById(R.id.belediyeLocationIV);
-        valiLocationIM =  mainView.findViewById(R.id.valiLocationIV);
-         belediyePhoneIV =  mainView.findViewById(R.id.belediyePhoneIV);
-         valiPhoneIV =  mainView.findViewById(R.id.valiPhoneIV);
+    private void init()
+    {
 
+        recyclerView = mainView.findViewById(R.id.kurumRecycleView);
+        kurumList = new ArrayList<>() ;
+        kurumAdapter = new KurumAdapter(getContext(),kurumList);
+        kurumLayoutManager = new LinearLayoutManager(getContext());
 
-        this.context=getContext();
+    }
+    private void setuprecyleView()
+    {
+        recyclerView.setLayoutManager(kurumLayoutManager);
+        recyclerView.setAdapter(kurumAdapter);
     }
 
 
 
-    public void makePhone(View view) {
-
-        int id = view.getId();
-
-        if(id == R.id.valiPhoneIV)
-        {
-
-            Uri number = Uri.parse("tel:"+valiPhoneTV.getText().toString());
-            Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
-            PackageManager packageManager =context.getPackageManager();
-            List<ResolveInfo> activities = packageManager.queryIntentActivities(callIntent, 0);
-            boolean isIntentSafe = activities.size() > 0;
-
-            // Start an activity if it's safe
-            if (isIntentSafe) {
-                context.startActivity(callIntent);
-            }
-
-        }
-        else
-        {
-
-            Uri number = Uri.parse("tel:"+belediyePhoneTV.getText().toString());
-            Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
-            PackageManager packageManager =context.getPackageManager();
-            List<ResolveInfo> activities = packageManager.queryIntentActivities(callIntent, 0);
-            boolean isIntentSafe = activities.size() > 0;
-
-            // Start an activity if it's safe
-            if (isIntentSafe) {
-                context.startActivity(callIntent);
-            }
-        }
-    }
-
-    public void goLocation(View view) {
-
-        int id = view.getId();
-
-        if(id == R.id.valiLocationIV)
-        {
-
-            // Map point based on address
-            Uri location = Uri.parse("geo:0,0?q=1600+Amphitheatre+Parkway,+Mountain+View,+California");
-            // Or map point based on latitude/longitude
-            // Uri location = Uri.parse("geo:37.422219,122.08364?z=14"); // z param is zoom level
-            Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
-            PackageManager packageManager =context.getPackageManager();
-            List<ResolveInfo> activities = packageManager.queryIntentActivities(mapIntent, 0);
-            boolean isIntentSafe = activities.size() > 0;
-
-            // Start an activity if it's safe
-            if (isIntentSafe) {
-                context.startActivity(mapIntent);
-            }
-        }
-        else
-        {
-            // Map point based on address
-           // Uri location = Uri.parse("geo:0,0?q=1600+Amphitheatre+Parkway,+Mountain+View,+California");
-            // Or map point based on latitude/longitude
-             Uri location = Uri.parse("geo:37.422219,122.08364?z=14"); // z param is zoom level
-            Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
-            PackageManager packageManager =context.getPackageManager();
-            List<ResolveInfo> activities = packageManager.queryIntentActivities(mapIntent, 0);
-            boolean isIntentSafe = activities.size() > 0;
-
-            // Start an activity if it's safe
-            if (isIntentSafe) {
-                context.startActivity(mapIntent);
-            }
-        }
-    }
-
-    @Override
-    public void onClick(View view) {
 
 
-        int id = view.getId();
-
-        if(id == R.id.valiLocationIV)
-        {
-
-            // Map point based on address
-            Uri location = Uri.parse("geo:0,0?q=1600+Amphitheatre+Parkway,+Mountain+View,+California");
-            // Or map point based on latitude/longitude
-            // Uri location = Uri.parse("geo:37.422219,122.08364?z=14"); // z param is zoom level
-            Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
-            PackageManager packageManager =context.getPackageManager();
-            List<ResolveInfo> activities = packageManager.queryIntentActivities(mapIntent, 0);
-            boolean isIntentSafe = activities.size() > 0;
-
-            // Start an activity if it's safe
-            if (isIntentSafe) {
-                context.startActivity(mapIntent);
-            }
-        }
-        else
-        {
-            // Map point based on address
-            // Uri location = Uri.parse("geo:0,0?q=1600+Amphitheatre+Parkway,+Mountain+View,+California");
-            // Or map point based on latitude/longitude
-            Uri location = Uri.parse("geo:37.422219,122.08364?z=14"); // z param is zoom level
-            Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
-            PackageManager packageManager =context.getPackageManager();
-            List<ResolveInfo> activities = packageManager.queryIntentActivities(mapIntent, 0);
-            boolean isIntentSafe = activities.size() > 0;
-
-            // Start an activity if it's safe
-            if (isIntentSafe) {
-                context.startActivity(mapIntent);
-            }
-        }
-
-    }
 }

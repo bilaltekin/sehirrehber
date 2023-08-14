@@ -56,10 +56,7 @@ public class MekanAdapter extends RecyclerView.Adapter<MekanHolder> {
                     Uri location = Uri.parse(arrayList.get(i).getLocation());
                     Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
 
-                    /*Intent chooser = Intent.createChooser(mapIntent,"Bir tane uygulama seçin");
 
-
-                    context.startActivity(chooser);*/
                     // Verify it resolves
                 PackageManager packageManager =context.getPackageManager();
                 List<ResolveInfo> activities = packageManager.queryIntentActivities(mapIntent, 0);
