@@ -1,4 +1,4 @@
-package com.example.sehirrehberi.model;
+package com.tekin.sehirrehber.model;
 
 public class YemekModel {
 

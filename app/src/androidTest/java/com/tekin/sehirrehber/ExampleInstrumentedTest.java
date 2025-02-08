@@ -1,4 +1,4 @@
-package com.example.sehirrehberi;
+package com.tekin.sehirrehber;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

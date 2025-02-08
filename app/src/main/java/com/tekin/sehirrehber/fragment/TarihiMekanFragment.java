@@ -1,4 +1,4 @@
-package com.example.sehirrehberi.fragment;
+package com.tekin.sehirrehber.fragment;
 
 
 import android.os.Bundle;
@@ -11,9 +11,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.sehirrehberi.Adapter.MekanAdapter;
-import com.example.sehirrehberi.R;
-import com.example.sehirrehberi.model.MekanModel;
+import com.tekin.sehirrehber.Adapter.MekanAdapter;
+
+import com.tekin.sehirrehber.R;
+import com.tekin.sehirrehber.model.MekanModel;
 
 import java.util.ArrayList;
 
@@ -57,9 +58,9 @@ public class TarihiMekanFragment extends Fragment {
 
         mekanList.add(new MekanModel("Hasan Paşa Hanı","https://gezievreni.com/wp-content/uploads/2017/04/Hasan-Pasa-Hani-Diyarbakir.jpg","geo:37.912914,40.2369558?q=37.912914,40.2369558,20(Hasan Paşa Hanı)"));
 
-        mekanList.add(new MekanModel("Ulu cami","http://semerkandvakfi.org/wp-content/uploads/2018/12/diyarbakir-ulu-camii-banner-1024x556.jpg","geo:37.9123646,40.2357003?q=37.9123646,40.2357003,20(Diyarbakır+Ulu+Cami)"));
+        mekanList.add(new MekanModel("Ulu cami","http://www.sur.gov.tr/kurumlar/sur.gov.tr/il%C3%A7emiz_fotolar/Sur%20Tarihi%20Foto/ulu_cami2.JPG","geo:37.9123646,40.2357003?q=37.9123646,40.2357003,20(Diyarbakır+Ulu+Cami)"));
         mekanList.add(new MekanModel("Sülüklü Han","https://seymenbozaslan.com/wp-content/uploads/2018/12/IMG_9759-1024x683.jpg","geo:37.9115354,40.2373282?q=37.9115354,40.2373282,20(Sülüklü+Han)"));
-        mekanList.add(new MekanModel("Suluk Han","http://web.demirhotel.com.tr/images/tarih/sulukluhan.jpg","geo:41.017099,28.9402765"));
+        mekanList.add(new MekanModel("Suluk Han","https://www.pasurunsesi.com/wp-content/uploads/2024/03/Su%CC%88lu%CC%88klu%CC%88-Han.jpg","geo:41.017099,28.9402765"));
 
 
         mekanList.add(new MekanModel("Tarihi Sur","https://i.emlaktasondakika.com/Files/NewsImages2/2018/07/29/760x430/diyarbakir_138506_04876.jpg","geo:0,0?q=41.0240873,29.012031"));
@@ -67,7 +68,7 @@ public class TarihiMekanFragment extends Fragment {
         mekanList.add(new MekanModel("Hevsel Bahçeleri","https://seyyahdefteri.com/wp-content/uploads/2018/12/Hevsel-Bah%C3%A7eleri-3-620x330.jpg","geo:37.9002134,40.2392367?q=37.9002134,40.2392367,20(Hevsel Bahçeleri)"));
         mekanList.add(new MekanModel("Surp Giragos Kilisesi","http://galeri3.arkitera.com/var/resizes/Haber/2015/04/14/surpgrigos.jpg.jpg.jpeg","geo:37.910833,40.238889?q=37.910833,40.238889,20(Surp Giragos Kilisesi)"));
 
-        mekanList.add(new MekanModel("On gözlü Köprü","https://diyarbekirde.com/wp-content/uploads/2019/05/Diyarbak%C4%B1r-On-G%C3%B6zl%C3%BC-K%C3%B6pr%C3%BC-740x300.png","geo:37.8873015,40.228318?q=37.8873015,40.228318,20(On gözlü Köprü)"));
+        mekanList.add(new MekanModel("On gözlü Köprü","https://diyarbakir.org.tr/wp-content/uploads/2021/06/ongozlu-1x.jpg","geo:37.8873015,40.228318?q=37.8873015,40.228318,20(On gözlü Köprü)"));
 
         mekanList.add(new MekanModel("Mar Petyun Keldani Katolik Kilisesi","https://i.pinimg.com/originals/91/4f/c8/914fc858b760484e8f089caaecb449f5.jpg","geo:37.9108069,40.2379022?q=37.9108069,40.2379022,20(Mar Petyun Keldani Katolik Kilisesi)"));
 
@@ -84,8 +85,8 @@ public class TarihiMekanFragment extends Fragment {
         mekanList.add(new MekanModel("Behram Paşa Cami","http://www.svbusinesshotel.com/file/behram-pasa-camii.jpg","geo:37.9094457,40.2320188?q=37.9094457,40.2320188,20(Behram Paşa Cami)"));
         mekanList.add(new MekanModel("Nebi Cami","https://www.nenerede.com.tr/wp-content/uploads/2017/05/Nebi-Cami-3.jpg","geo:37.915096,40.2342801?q=37.915096,40.2342801,20(Nebi Cami)"));
         mekanList.add(new MekanModel("Arkeoloji Müzesi","https://media-cdn.tripadvisor.com/media/photo-s/11/9c/61/bd/muze-bahcesinden-goruntu.jpg"));
-        mekanList.add(new MekanModel("Fatih Paşa Cami","https://scontent-atl3-1.cdninstagram.com/vp/cd14417d2a44ea79090d32bfce5b4e0e/5DAD3699/t51.2885-15/e35/58008189_2315518385371443_6546098505634370435_n.jpg?_nc_ht=scontent-atl3-1.cdninstagram.com","geo:37.9115471,40.2405092?q=37.9115471,40.2405092,20(Fatih Paşa Cami)"));
-        mekanList.add(new MekanModel("Hüsrevpaşa Camii","http://www.diyarbakiryasam.com/wp-content/gallery/husrev-pasa-camii/02.jpg","geo:37.9071203,40.2349743?q=37.9071203,40.2349743,20(Hüsrevpaşa Camii)"));
+        mekanList.add(new MekanModel("Fatih Paşa Cami","https://www.kulturportali.gov.tr/repoKulturPortali/large/13022013/ae18ed9c-72a2-4c7d-bb11-aea1a310257a.JPG","geo:37.9115471,40.2405092?q=37.9115471,40.2405092,20(Fatih Paşa Cami)"));
+        mekanList.add(new MekanModel("Hüsrevpaşa Camii","https://www.ipekyolu.bel.tr/upload/husrev-pasa-camii-I33D01M9_4980.jpg","geo:37.9071203,40.2349743?q=37.9071203,40.2349743,20(Hüsrevpaşa Camii)"));
         mekanList.add(new MekanModel("Melik Ahmet Camii","https://www.kulturportali.gov.tr/repoKulturPortali/large/13022013/550077e5-2b53-48bf-b124-b8bc09702fac.JPG","geo:37.9108843,40.2280751?q=37.9108843,40.2280751,20(Melik Ahmet Camii)"));
 
 

@@ -1,4 +1,4 @@
-package com.example.sehirrehberi.Adapter;
+package com.tekin.sehirrehber.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,10 +13,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.sehirrehberi.R;
-import com.example.sehirrehberi.holder.KurumHolder;
-import com.example.sehirrehberi.model.KurumModel;
-import com.example.sehirrehberi.model.MekanModel;
+
+import com.tekin.sehirrehber.R;
+import com.tekin.sehirrehber.holder.KurumHolder;
+import com.tekin.sehirrehber.model.KurumModel;
 
 import java.util.ArrayList;
 import java.util.List;

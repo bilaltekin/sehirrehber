@@ -1,4 +1,4 @@
-package com.example.sehirrehberi.fragment;
+package com.tekin.sehirrehber.fragment;
 
 
 import android.os.Bundle;
@@ -11,9 +11,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.sehirrehberi.Adapter.YemekAdapter;
-import com.example.sehirrehberi.R;
-import com.example.sehirrehberi.model.YemekModel;
+import com.tekin.sehirrehber.Adapter.YemekAdapter;
+
+import com.tekin.sehirrehber.R;
+import com.tekin.sehirrehber.model.YemekModel;
 
 import java.util.ArrayList;
 
@@ -53,7 +54,7 @@ public class YemekFragment extends Fragment {
     private void listeyidoldur() {
 
         yemekList.add(new  YemekModel( "Kibe Mumbar","http://www.e-sehir.com/yemek_tarifleri/yoresel/resim/kibe-1299.jpg"));
-        yemekList.add(new YemekModel("İçli Köfte","https://img.yemektarifleri.com/photos/2118/1519305713_400.jpg"));
+        yemekList.add(new YemekModel("İçli Köfte","https://image.hurimg.com/i/hurriyet/75/750x422/5ab1199beb10bb2454209d88.jpg"));
         yemekList.add(new YemekModel("Duvaklı Pilav","https://iasbh.tmgrup.com.tr/e81fe3/812/467/0/215/803/677?u=https://isbh.tmgrup.com.tr/sbh/2018/09/14/duvakli-pilav-1536925943167.jpg"));
     };
 

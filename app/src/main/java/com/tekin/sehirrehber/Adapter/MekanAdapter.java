@@ -1,4 +1,4 @@
-package com.example.sehirrehberi.Adapter;
+package com.tekin.sehirrehber.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,10 +14,10 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.example.sehirrehberi.R;
-import com.example.sehirrehberi.holder.MekanHolder;
-import com.example.sehirrehberi.model.MekanModel;
-import com.squareup.picasso.Picasso;
+
+import com.tekin.sehirrehber.R;
+import com.tekin.sehirrehber.holder.MekanHolder;
+import com.tekin.sehirrehber.model.MekanModel;
 
 import java.util.ArrayList;
 import java.util.List;

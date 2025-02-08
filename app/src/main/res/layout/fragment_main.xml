@@ -74,6 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="Hastaneler"
+                android:visibility="gone"
                 tools:layout_editor_absoluteX="78dp"
                 tools:layout_editor_absoluteY="487dp" />
 
@@ -83,6 +84,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="Kurumlar"
+                android:visibility="gone"
                 tools:layout_editor_absoluteX="79dp"
                 tools:layout_editor_absoluteY="564dp" />
 
@@ -92,6 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="Tarihçe"
+                android:visibility="gone"
                 tools:layout_editor_absoluteX="85dp"
                 tools:layout_editor_absoluteY="641dp" />
 

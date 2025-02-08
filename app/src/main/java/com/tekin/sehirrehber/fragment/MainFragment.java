@@ -1,7 +1,6 @@
-package com.example.sehirrehberi.fragment;
+package com.tekin.sehirrehber.fragment;
 
 
-import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,8 +12,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.example.sehirrehberi.ChangeFragment;
-import com.example.sehirrehberi.R;
+import com.tekin.sehirrehber.ChangeFragment;
+import com.tekin.sehirrehber.R;
+
 
 /**
  * A simple {@link Fragment} subclass.

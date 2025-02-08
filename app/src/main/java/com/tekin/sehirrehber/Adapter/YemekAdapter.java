@@ -1,4 +1,4 @@
-package com.example.sehirrehberi.Adapter;
+package com.tekin.sehirrehber.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,9 +9,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.sehirrehberi.R;
-import com.example.sehirrehberi.holder.YemekHolder;
-import com.example.sehirrehberi.model.YemekModel;
+
+import com.tekin.sehirrehber.R;
+import com.tekin.sehirrehber.holder.YemekHolder;
+import com.tekin.sehirrehber.model.YemekModel;
 
 import java.util.ArrayList;
 

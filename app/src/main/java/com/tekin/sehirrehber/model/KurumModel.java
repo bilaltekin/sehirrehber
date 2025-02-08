@@ -1,6 +1,4 @@
-package com.example.sehirrehberi.model;
-
-import android.widget.TextView;
+package com.tekin.sehirrehber.model;
 
 public class KurumModel {
 

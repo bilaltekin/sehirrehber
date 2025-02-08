@@ -1,4 +1,4 @@
-package com.example.sehirrehberi.holder;
+package com.tekin.sehirrehber.holder;
 
 import android.view.View;
 import android.widget.ImageView;
@@ -7,7 +7,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.sehirrehberi.R;
+import com.tekin.sehirrehber.R;
+
 
 public class YemekHolder extends RecyclerView.ViewHolder {
 

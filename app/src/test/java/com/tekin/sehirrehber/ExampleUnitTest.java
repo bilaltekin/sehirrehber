@@ -1,4 +1,4 @@
-package com.example.sehirrehberi;
+package com.tekin.sehirrehber;
 
 import org.junit.Test;
 

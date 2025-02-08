@@ -1,6 +1,5 @@
-package com.example.sehirrehberi;
+package com.tekin.sehirrehber;
 
-import android.app.Activity;
 import android.content.Context;
 
 import androidx.appcompat.app.AppCompatActivity;

@@ -1,15 +1,12 @@
-package com.example.sehirrehberi.activity;
+package com.tekin.sehirrehber.activity;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.sehirrehberi.ChangeFragment;
-import com.example.sehirrehberi.R;
-import com.example.sehirrehberi.fragment.MainFragment;
+import com.tekin.sehirrehber.ChangeFragment;
+import com.tekin.sehirrehber.R;
+import com.tekin.sehirrehber.fragment.MainFragment;
 
 public class MainActivity extends AppCompatActivity {
 

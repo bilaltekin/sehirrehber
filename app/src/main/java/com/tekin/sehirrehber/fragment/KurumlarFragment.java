@@ -1,11 +1,6 @@
-package com.example.sehirrehberi.fragment;
+package com.tekin.sehirrehber.fragment;
 
 
-import android.content.Context;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -15,17 +10,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.example.sehirrehberi.Adapter.KurumAdapter;
-import com.example.sehirrehberi.Adapter.MekanAdapter;
-import com.example.sehirrehberi.R;
-import com.example.sehirrehberi.model.KurumModel;
-import com.example.sehirrehberi.model.MekanModel;
+import com.tekin.sehirrehber.Adapter.KurumAdapter;
+
+import com.tekin.sehirrehber.R;
+import com.tekin.sehirrehber.model.KurumModel;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
